@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import ColorForm from './components/ColorForm';
 import DisplayColor from './components/DisplayColor';
@@ -8,9 +8,10 @@ function App() {
   const [ colorArray, setColorArray ] = useState([]); //holding all colors in the arrays
   return (
     <div className="App">
+      
       <ColorForm colorArray={ colorArray} setColorArray={ setColorArray}/> 
       <br /> <hr />
-      <DisplayColor />
+      <DisplayColor colorArray={colorArray}/>
     </div>
   );
 }
